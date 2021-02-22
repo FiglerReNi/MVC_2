@@ -1,7 +1,8 @@
 <?php
 
 include 'User.php';
-include "User1.php";
+include 'User1.php';
+include 'Customer.php';
 
 $user1 = new User();
 $user1->name = 'Brad';
@@ -19,14 +20,30 @@ echo $user2->sayHello();
 
 echo '</br>';
 
-$user3 = new User1("Brad", 36);
+$user3 = new User1('Brad', 36);
 echo $user3->name . ' is ' . $user3->age . ' years old';
 echo '</br>';
 echo $user3->sayHello();
 
 echo '</br>';
 
-$user4 = new User1("Jeff", 28);
+$user4 = new User1('Jeff', 28);
 echo $user4->name . ' is ' . $user4->age . ' years old';
 echo '</br>';
 echo $user4->sayHello();
+
+echo '</br>';
+
+$customer = new Customer('Brad', 36);
+echo $customer->getEmail();
+
+echo '</br>';
+
+$user5 = new User2('Jeff', 28);
+//echo $user5->getName();
+echo $user5->__get('name');
+//$user5->setName('John');
+$user5->__set('name', 'John');
+echo '</br>';
+//echo $user5->getName();
+echo $user5->__get('name');

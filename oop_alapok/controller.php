@@ -3,6 +3,7 @@
 include 'User.php';
 include 'User1.php';
 include 'Customer.php';
+include 'Customer1.php';
 
 $user1 = new User();
 $user1->name = 'Brad';
@@ -47,3 +48,7 @@ $user5->__set('name', 'John');
 echo '</br>';
 //echo $user5->getName();
 echo $user5->__get('name');
+
+echo '</br>';
+
+$customer1 = new Customer1();

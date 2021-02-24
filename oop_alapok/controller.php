@@ -51,4 +51,9 @@ echo $user5->__get('name');
 
 echo '</br>';
 
-$customer1 = new Customer1();
+$customer1 = new Customer1('John', 28, 200);
+echo $customer1->pay(100);
+echo '</br>';
+echo $customer1->getBalance();
+
+echo '</br>';

@@ -1,22 +1,21 @@
 <?php
 
 
-class Pages
+class Pages extends Controller
 {
 
-    /**
-     * Pages constructor.
-     */
     public function __construct()
     {
-//        echo 'pages';
     }
 
-    public function index(){
-
+    public function index()
+    {
+        $this->loadView('pages/index', ['title' => 'Welcome']);
     }
 
-    public function about($id = ""){
+    public function about($id = "")
+    {
         echo 'This is about' . $id;
+        $this->loadView('pages/about');
     }
 }

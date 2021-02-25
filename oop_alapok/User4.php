@@ -3,11 +3,28 @@
 
 class User4
 {
-    public $name;
-    public $age;
+
+    /**
+     * @var string
+     */
+    public string $name;
+
+    /**
+     * @var int
+     */
+    public int $age;
+
+    /**
+     * @var int
+     */
     public static $minPassLength = 6;
 
-    public static function validatePass($pass){
+    /**
+     * @param $pass
+     * @return bool
+     */
+    public static function validatePass($pass) :bool
+    {
         if(strlen($pass) >= self::$minPassLength){
             return true;
         }else

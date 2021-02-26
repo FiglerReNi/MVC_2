@@ -8,7 +8,7 @@ class Pages extends Controller
 
     public function index()
     {
-        $this->loadView('pages/index', ['title' => 'Welcome']);
+        $this->loadView('pages/index', ['title' => 'SharePosts']);
     }
 
     public function about($id = "")

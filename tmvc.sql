@@ -1,10 +1,19 @@
-CREATE DATABASE `tmvc`CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
+CREATE DATABASE `shareposts`CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
 
-CREATE TABLE tmvc.posts (
+CREATE TABLE shareposts.users (
 id INT NOT NULL AUTO_INCREMENT,
-title VARCHAR (255),
+NAME VARCHAR (255),
+email VARCHAR (255),
+PASSWORD VARCHAR (255),
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 PRIMARY KEY (id)
 ) CHARSET = utf8 COLLATE = utf8_hungarian_ci;
 
-INSERT INTO tmvc.posts (title) VALUES ('teszt1');
-INSERT INTO tmvc.posts (id, title) VALUES (NULL, 'teszt2');
+CREATE TABLE shareposts.posts (
+id INT NOT NULL AUTO_INCREMENT,
+user_id INT,
+title VARCHAR(255),
+BODY TEXT,
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (id)
+) CHARSET=utf8 COLLATE=utf8_hungarian_ci;

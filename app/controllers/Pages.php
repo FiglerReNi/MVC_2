@@ -15,7 +15,7 @@ class Pages extends Controller
 
     public function about($id = "")
     {
-        echo 'This is about' . $id;
-        $this->loadView('pages/about');
+        //echo 'This is about' . $id;
+        $this->loadView('pages/about', ['title' => 'About']);
     }
 }

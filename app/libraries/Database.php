@@ -50,7 +50,7 @@ class Database {
         $this->stmt->bindValue($param, $value, $type);
     }
 
-    private function execute(){
+    public function execute(){
         return $this->stmt->execute();
     }
 

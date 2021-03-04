@@ -8,6 +8,9 @@ class Pages extends Controller
 
     public function index()
     {
+        if(isLoggedIn()){
+            redirect('posts');
+        }
         $this->loadView('pages/index', ['title' => 'SharePosts', 'description' => 'Simple Social Network']);
     }
 

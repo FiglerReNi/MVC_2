@@ -18,4 +18,16 @@ class Post
 
     }
 
+    public function addPost($data){
+        $this->db->query('INSERT INTO posts SET title =:title, user_id =:user_id, body =:body');
+        $this->db->bind(':title', $data['title']);
+        $this->db->bind(':user_id',  $data['user_id']);
+        $this->db->bind(':body',  $data['body']);
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }

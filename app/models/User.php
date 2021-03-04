@@ -22,6 +22,14 @@ class User
         }
     }
 
+    public function findUserById($id){
+        $this->db->query('SELECT * FROM users WHERE id =:id');
+        $this->db->bind(':id', $id);
+        $row = $this->db->getSingleResult();
+
+        return $row;
+    }
+
     public function register($data){
         $this->db->query('INSERT INTO users SET name =:name, email =:email, password =:password');
         $this->db->bind(':name', $data['name']);

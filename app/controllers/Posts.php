@@ -10,6 +10,7 @@ class Posts extends Controller
             redirect('users/login');
         }
         $this->postModel = $this->loadModel('Post');
+        $this->userModel = $this->loadModel('User');
     }
 
     public function index(){
@@ -58,6 +59,15 @@ class Posts extends Controller
             $this->loadView('posts/add', $data);
         }
 
+    }
 
+    public function show($id){
+        $post = $this->postModel->getPostById($id);
+        $user = $this->userModel->findUserById($post['user_id']);
+        $data = [
+            'post' => $post,
+            'user' => $user
+        ];
+        $this->loadView('posts/show', $data);
     }
 }

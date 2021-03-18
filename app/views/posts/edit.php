@@ -2,8 +2,8 @@
     <a href="<?= URLROOT; ?>/posts/index" class="btn btn-light"><i class="fa fa-backward"> Back</i></a>
     <div class="card card-body bg-light mt-5">
         <h2>Edit Post</h2>
-        <p>Create a post with this form</p>
-        <form action="<?= URLROOT; ?>/posts/edit" method="post">
+        <p>Edit a post with this form</p>
+        <form action="<?= URLROOT; ?>/posts/edit/<?= $data['id'] ?> " method="post">
             <div class="form-group">
                 <label for="title" class="col-lg">Title: <sup>*</sup>
                     <input type="text" name="title" class="form-control form-control-lg <?= (!empty($data['title_err'])) ? 'is-invalid' :  ''; ?>" value="<?= $data['title']; ?>"/>

@@ -68,7 +68,7 @@ class Posts extends Controller
             $data = [
                 'title' => trim($_POST['title']),
                 'body' => trim($_POST['body']),
-                'user_id' => $_SESSION['user_id'],
+                'id' => $id,
                 'title_err' => '',
                 'body_err' => ''
             ];
@@ -82,8 +82,8 @@ class Posts extends Controller
             }
 
             if(empty($data['title_err']) && empty($data['body_err'])){
-                if($this->postModel->addPost($data)){
-                    doFlash('post_message', 'Post Added');
+                if($this->postModel->updatePost($data)){
+                    doFlash('post_message', 'Post Updated');
                     redirect('posts');
                 }else{
                     die('Something went wrong');
@@ -93,13 +93,13 @@ class Posts extends Controller
             }
         }else{
             $post = $this->postModel->getPostById($id);
-            if($post->user_id != $_SESSION['user_id']){
+            if($post['user_id'] != $_SESSION['user_id']){
                 redirect('posts');
             }
             $data = [
                 'id' => $id,
-                'title' => $post->title,
-                'body' => $post->body
+                'title' => $post['title'],
+                'body' => $post['body']
             ];
             $this->loadView('posts/edit', $data);
         }

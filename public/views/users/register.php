@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/header.php'; ?>
+<?php require APPROOT . '/public/views/inc/header.php'; ?>
     <div class="row">
         <div class="col-md-6 mx-auto">
             <div class="card card-body bg-light mt-5">
@@ -25,7 +25,7 @@
                     </div>
                     <div class="form-group">
                         <label for="confirm_password" class="col-lg">Confirm Password: <sup>*</sup>
-                            <input type="text" name="confirm_password" class="form-control form-control-lg <?= (!empty($data['confirm_password_err'])) ? 'is-invalid' :  ''; ?>" value="<?= $data['confirm_password']; ?>"/>
+                            <input type="password" name="confirm_password" class="form-control form-control-lg <?= (!empty($data['confirm_password_err'])) ? 'is-invalid' :  ''; ?>" value="<?= $data['confirm_password']; ?>"/>
                             <span class="invalid-feedback"><?= $data['confirm_password_err'] ?></span>
                         </label>
                     </div>
@@ -41,4 +41,4 @@
             </div>
         </div>
     </div>
-<?php require APPROOT . '/views/inc/footer.php'; ?>
+<?php require APPROOT . '/public/views/inc/footer.php'; ?>

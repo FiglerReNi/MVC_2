@@ -10,6 +10,6 @@
     <title><?= SITENAME; ?></title>
 </head>
 <body>
-    <?php require_once APPROOT . '/views/inc/navbar.php' ?>
+    <?php require_once APPROOT . '/public/views/inc/navbar.php' ?>
     <div class="container">
 

@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/header.php'; ?>
+<?php require APPROOT . '/public/views/inc/header.php'; ?>
     <a href="<?= URLROOT; ?>/posts/index" class="btn btn-light"><i class="fa fa-backward"> Back</i></a>
     <br>
     <h1><?= $data['post']['title'] ?></h1>
@@ -17,4 +17,4 @@
     </form>
 <?php endif; ?>
 
-<?php require APPROOT . '/views/inc/footer.php'; ?>
+<?php require APPROOT . '/public/views/inc/footer.php'; ?>

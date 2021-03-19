@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/header.php'; ?>
+<?php require APPROOT . '/public/views/inc/header.php'; ?>
 <a href="<?= URLROOT; ?>/posts/index" class="btn btn-light"><i class="fa fa-backward"> Back</i></a>
         <div class="card card-body bg-light mt-5">
             <h2>Add Post</h2>
@@ -19,6 +19,6 @@
                 <input type="submit" class="btn btn-success" value="Submit">
             </form>
         </div>
-<?php require APPROOT . '/views/inc/footer.php'; ?>
+<?php require APPROOT . '/public/views/inc/footer.php'; ?>
 
 

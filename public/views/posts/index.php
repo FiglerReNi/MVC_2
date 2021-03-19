@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/header.php'; ?>
+<?php require APPROOT . '/public/views/inc/header.php'; ?>
 <?php doFlash('post_message') ?>
     <div class="row mb-3">
         <div class="col-md-6">
@@ -21,4 +21,4 @@
 
     </div>
 <?php endforeach; ?>
-<?php require APPROOT . '/views/inc/footer.php'; ?>
+<?php require APPROOT . '/public/views/inc/footer.php'; ?>
